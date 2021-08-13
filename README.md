@@ -175,7 +175,7 @@ us the name, predicted age, and another feature we won't worry about.
       ID twice_
 
 
-5a. Create another route called `'/check_name''` which will have the following variables to start:
+7a. Create another route called `'/check_name''` which will have the following variables to start:
 
    - `BASE_URL` -> the URL of the Agify.io API with query param *without* the name value
    - `name`     -> extract the query param called `name` out of the URL (`/check_name?name=<name>`)
@@ -183,7 +183,7 @@ us the name, predicted age, and another feature we won't worry about.
                    did in the Flask shell)
 
 
-5b. Next, you need to create an if:else conditional that will set the id's value to the max id plus 1, otherwise, start
+7b. Next, you need to create an if:else conditional that will set the id's value to the max id plus 1, otherwise, start
 at `-1`.  This will be tough since we didn't go over this before (this will not be on Sprint Challenge).  You can make a
 query to the database by using the `DB.session.query()` method and passing in SQLAlchemy's version of the `max()`
 function to grab the max `Record.id` and chaining the `.first()` method after rather than `.all()`.  Then, isolate the
@@ -192,7 +192,7 @@ value using tuple indexing (similar to list indexing).
    - _We will start at `-1` since we will be adding 1 to it when making our Record instance_
 
 
-5c. Create a try:except statement which does the following:
+7c. Create a try:except statement which does the following:
 
    - try --> adding a record to the database and returning a string that says `'Record added: '` followed by the string
              representation of the instance.
@@ -200,14 +200,14 @@ value using tuple indexing (similar to list indexing).
                 "stringify" the response because you can only render certain data types on a page._
 
 
-5d. Now that we've created our route, add 10-15 people to the database!
+7d. Now that we've created our route, add 10-15 people to the database!
 
 
-6. Now, we will modify our base route to return all the records from out database.  Keep in mind the italicized
+8. Now, we will modify our base route to return all the records from out database.  Keep in mind the italicized
    statement above!
 
 
-7. Lastly, create one more route which will do the same as the previous task but only return records where the person's
+9. Lastly, create one more route which will do the same as the previous task but only return records where the person's
    age is 40 or younger.  Call this route `'/no_older_than_40'`.
 
 
