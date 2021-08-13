@@ -200,6 +200,9 @@ value using tuple indexing (similar to list indexing).
                 "stringify" the response because you can only render certain data types on a page._
 
 
+5d. Now that we've created our route, add 10-15 people to the database!
+
+
 6. Now, we will modify our base route to return all the records from out database.  Keep in mind the italicized
    statement above!
 
